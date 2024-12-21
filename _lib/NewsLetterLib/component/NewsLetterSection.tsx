@@ -2,8 +2,9 @@
 
 import React, {useState} from 'react';
 import Image from 'next/image';
-import {FaTimes, FaTrash} from 'react-icons/fa'; // Import des icônes
-import courrier from '../../../public/images/Utils/courrier.png';
+import {FaTimes, FaTrash} from 'react-icons/fa';
+// @ts-ignore
+import courrier from "@/../public/images/Utils/courrier.png";
 import {addEmailToNewsletter, deleteEmailFromNewsletter} from "@lib/NewsLetterLib/service/newsLetter";
 
 export default function NewsLetterSection() {
