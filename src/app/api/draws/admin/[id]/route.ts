@@ -1,6 +1,6 @@
 // src/app/api/admin/draws/[id]/route.ts
 import { NextResponse } from 'next/server';
-import Draw from '@/../_lib/drawsLib/Draws';
+import Draw from '@lib/drawsLib/models/Draws';
 
 // DELETE (delete) a Draw
 export async function DELETE(req: Request) {
