@@ -59,11 +59,11 @@ export default function Navbar() {
                             <li className="whitespace-nowrap">
                                 <Link href="/">Accueil</Link>
                             </li>
-                            <li className="whitespace-nowrap cursor-pointer text-stroke-black"
-                                onClick={() => handleNavClick("products")}>Produits
-                            </li>
                             <li className="whitespace-nowrap">
                                 <Link href="/about">A propos</Link>
+                            </li>
+                            <li className="whitespace-nowrap">
+                                <Link href="/illustration">Illustration</Link>
                             </li>
                             <li className="whitespace-nowrap">
                                 <Link href="/contact">Contact</Link>

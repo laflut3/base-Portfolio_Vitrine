@@ -25,11 +25,6 @@ export default function MenuBurger() {
                             Accueil
                         </div>
                     </Link>
-                    <Link href="/">
-                        <div className="px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer">
-                            Produits
-                        </div>
-                    </Link>
                     <Link href="/about">
                         <div className="px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer">
                             A propos

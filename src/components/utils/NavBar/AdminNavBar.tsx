@@ -15,7 +15,7 @@ export default function AdminNavbar() {
         <header className="flex flex-row justify-between transition-all duration-300 font-thin text-xl letter-spacing fixed top-0 left-0 right-0 z-50 pt-0 pb-0 hover:bg-black hover:bg-opacity-50 hover:backdrop-blur-md">
             <div className={`flex items-center justify-center space-x-2 p-4`}>
                 <Image src={navIcon} alt="logo" width={60} height={60} style={{height: "auto"}}/>
-                <p className={`font-lazy-dog hidden sm:flex`}>Mona-venture ADMINISTRATION</p>
+                <p className={`font-lazy-dog hidden sm:flex`}>FLEO ADMINISTRATION</p>
                 <p className={`font-lazy-dog sm:hidden`}>ADMINISTRATION</p>
             </div>
             <div className={`flex items-center justify-center space-x-4 p-4`}>

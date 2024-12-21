@@ -9,12 +9,12 @@ const AdminPage: React.FC = () => {
         router.push("/admin/users");
     };
 
-    const handleProduct = () => {
-        router.push("/admin/product");
+    const handleIllustration = () => {
+        router.push("/admin/illustrations");
     };
 
-    const handleCommande = () => {
-        router.push("/admin/Commande");
+    const handleProject = () => {
+        router.push("/admin/project");
     };
 
     const handleNews = () => {
@@ -40,16 +40,16 @@ const AdminPage: React.FC = () => {
                         Utilisateurs
                     </button>
                     <button
-                        onClick={handleProduct}
+                        onClick={handleProject}
                         className="h-24 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-colors duration-300"
                     >
-                        Produits
+                        Projects
                     </button>
                     <button
-                        onClick={handleCommande}
+                        onClick={handleIllustration}
                         className="h-24 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-colors duration-300"
                     >
-                        Commandes
+                        Illustrations
                     </button>
                     <button
                         onClick={handleNews}
