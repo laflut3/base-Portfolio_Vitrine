@@ -5,10 +5,10 @@ import { useRouter } from "next/navigation";
 import { leapfrog } from 'ldrs';
 import { FaTrash } from "react-icons/fa";
 import Image from "next/image";
-import livre from "../../../../../public/images/Utils/livre-ouvert.png";
+import livre from "@public/images/Utils/livre-ouvert.png";
 import RedirectionArrow from "@lib/UserLib/component/admin/RedirectionArrow";
 import {deleteEmailFromNewsletter, getEmails, sendNewsletter} from "@lib/NewsLetterLib/service/newsLetter";
-import {EmailEntry} from "../../../../NewsLetterLib/type/EmailEntry";
+import {EmailEntry} from "@lib/NewsLetterLib/type/EmailEntry";
 
 const ProductForm: React.FC = () => {
     leapfrog.register();

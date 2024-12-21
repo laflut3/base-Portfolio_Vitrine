@@ -1,5 +1,4 @@
 import mongoose, { Schema, model } from "mongoose";
-import { CartDocument } from "@/../_lib/CartLib/Model/Cart"; // Importez le document du panier si vous en avez besoin
 
 export interface UserDocument {
     nom: string;
@@ -11,7 +10,6 @@ export interface UserDocument {
     isVerified: boolean;
     dateOfBirth: Date;
     createdAt: Date;
-    cart?: CartDocument; // Ajoutez cette ligne pour référencer le panier
 }
 
 const UserSchema = new Schema<UserDocument>({
@@ -47,10 +45,6 @@ const UserSchema = new Schema<UserDocument>({
     isAdmin: {
         type: Boolean,
         required: true
-    },
-    cart: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Cart', // Référence au modèle de panier
     },
     isVerified: {
         type: Boolean,

@@ -6,7 +6,6 @@ import {Provider} from "@/app/provider";
 import Footer from "@/components/Footer"
 import ClientNavbar from "@/components/ClientNavBar";
 import CookiePopupManager from "@/components/utils/cookies/CookiePopupManager";
-import CleanUpOrders from "@lib/OrderLib/component/CleanupOrder";
 
 export const metadata: Metadata = {
   title: "Fleo-base",
@@ -21,7 +20,6 @@ export default function RootLayout({children}: { children: React.ReactNode; }) {
       <html lang="fr">
       <body className={`bodyGe`}>
       <Provider>
-        <CleanUpOrders/>
         <ClientNavbar/>
         {children}
         <Footer/>

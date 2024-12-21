@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server';
 import { connectDB } from '@/../_lib/MongoLib/mongodb';
 import User from '@/../_lib/UserLib/models/User';
-import Cart from '@/../_lib/CartLib/Model/Cart';
-import Order from '@/../_lib/OrderLib/model/order';
 import {getServerSession} from "next-auth";
 import {authOptions} from "@/../_lib/UserLib/lib/auth";
 
@@ -34,20 +32,6 @@ export async function DELETE(request: Request) {
         if (!user) {
             console.error('User not found:', { userId });
             return NextResponse.json({ message: 'User not found' }, { status: 404 });
-        }
-
-        // Supprimer le panier de l'utilisateur si il en a un
-        const cart = await Cart.findOne({ user: userId });
-        if (cart) {
-            await Cart.findByIdAndDelete(cart._id);
-            console.log('Cart deleted successfully:', { cartId: cart._id });
-        }
-
-        // Supprimer toutes les commandes de l'utilisateur
-        const orders = await Order.find({ userId });
-        if (orders.length > 0) {
-            await Order.deleteMany({ userId });
-            console.log('Orders deleted successfully for user:', { userId });
         }
 
         // Supprimer l'utilisateur

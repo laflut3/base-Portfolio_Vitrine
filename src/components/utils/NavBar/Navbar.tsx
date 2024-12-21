@@ -3,11 +3,9 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
-import SideBarCart from '@lib/CartLib/component/SideBarCart';
 import BurgerMenu from './MenuBurger';
 import Link from 'next/link';
-import logo from '@/../public/images/logo/fleo-web-reversed.png';
-import cart from "@/../public/images/Utils/black-cart-icon.png";
+import logo from '@public/images/logo/fleo-web-reversed.png'
 import { AiOutlineUser } from "react-icons/ai";
 
 export default function Navbar() {
@@ -75,10 +73,6 @@ export default function Navbar() {
 
                     {/* Cart and Profile or Burger Menu */}
                     <div className="flex w-1/3 justify-end items-center pr-2 space-x-2">
-                        <button onClick={() => setIsSidebarOpen(true)}>
-                            <Image src={cart} alt="cart" width={40} height={40}/>
-                        </button>
-
                         {/* Profile button hidden on mobile and tablet screens, Burger Menu visible */}
                         <div className="hidden md:block">
                             {!session?.user ? (
@@ -99,8 +93,6 @@ export default function Navbar() {
                     </div>
                 </div>
             </nav>
-
-            <SideBarCart isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
         </header>
 
     );
